@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from ecommerce import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('ecommerce.urls')),
+    url(r'^$', views.home, name='home'),
+    url(r'^produtos', include('ecommerce.urls')),
+    url(r'^usuarios', include('manageusers.urls')),
 ]

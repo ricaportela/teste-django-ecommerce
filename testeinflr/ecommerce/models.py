@@ -15,11 +15,3 @@ class Product(models.Model):
         verbose_name = "Produtos"
         verbose_name_plural = "Produtos"
 
-class User(models.Model):
-    login = models.CharField(max_length=10)
-    password = models.CharField(max_length=10)
-
-    class Meta():
-        verbose_name = "Usuarios"
-        verbose_name_plural = "Usuarios"
-
